@@ -8,6 +8,7 @@ LLM Used: ChatGPT-4
 ### 1.1 Scenario A: Technical Explanation
 
 Initial Prompt: Explain neural networks to 10-year old kid.
+
 Initial Output: „Imagine you're teaching a robot how to recognize cats in pictures.
 A neural network is like a giant team of tiny helpers inside a computer. Each helper does a very small job and passes information to other helpers.
 Let's use a simple example
@@ -123,10 +124,12 @@ Then they all vote together:
 "Yes, this looks like Dad!"
 If enough detectives agree, the phone unlocks.
 That's the basic idea behind a neural network: many small parts working together to learn patterns from examples and make smart decisions. 
+
 Final Refined Prompt: You are an expert AI-Educator. 
 Explain neural networks to 10-year old kid, because he just surprised by face detection feature in his father's smartphone. 
 Give output in structured way, explicitly forbid the repetition of examples; look to mandate that each section must build chronologically upon the previous one rather than introducing redundant concepts. Also make it interesting.
 Give result in 300 words, because of long text kid do not show interest to read it whole and it loses the interest in learning.
+
 Final Output: How Does My Dad's Phone Recognize Faces?
 Important Rule: We will use one new example at a time. Each step builds on the previous step, so we don't repeat ideas.
 1️⃣ Step One: Learning Like a Brain
@@ -189,6 +192,7 @@ Kind regards,
 
 Refined Prompt 1: Draft me a professional warm mail, that I want to decline the job offer, because I have some personal reasons to not join this company.
  but I am always interested in the company, because you are working in future technologies like AI and right now future of AI, ML engineer is very bright.
+
 Output 1: Dear Hiring Team,
 Thank you very much for offering me the opportunity to join your company. I truly appreciate the time, effort, and trust that you have invested throughout the recruitment process.
 After careful consideration, I have decided to decline the offer due to personal reasons that currently prevent me from taking on this opportunity. This was not an easy decision, as I was genuinely impressed by your organization, its vision, and the innovative work being carried out within the company.
@@ -268,6 +272,7 @@ Short & Brandable
 For a strong balance of emotional appeal, sustainability, and memorability, I would recommend:
 🌊 "Every Sip Helps the Sea."
 It immediately connects the product benefit (drinking water) with the environmental mission (removing ocean plastic), making the impact easy for customers to understand and remember.
+
 Final Refined Prompt: Act as an expert Creative Copywriter and Brand Strategist specializing in sustainable consumer goods. Develop 3 bold, action-oriented taglines for an eco-friendly water bottle made from recycled ocean plastic. The tone should be gritty, urgent, and empowering—focused on turning pollution into a solution. Avoid soft, clichéd words like "eco," "green," or "sip."
 
 Final Output: Here are 3 bold, action-oriented taglines with a gritty and empowering tone:
@@ -282,20 +287,16 @@ Alternative options with an even stronger edge:
 Trash the Crisis. Carry the Comeback.
 Born from Waste. Driven by Action.
 The Ocean Fought Back. This Is Its Answer.
+
 ### 1.2 Iteration Documentation
+
 Scenario A: Technical Explanation
 
 | Version | Prompt | What Changed | Why This Improved the Output |
 | :--- | :--- | :--- | :--- |
 | V1 | Explain neural networks to 10-year old kid. | N/A | N/A |
-| V2 | You are an expert in artificial intelligence. Explain neural networks to 10-year old kid who wants to know basics. He is eager to learn artificial intelligence. He was surprised by face detection lock in his father's mobile. | * Role Assignment: Designated the AI as an "expert in artificial intelligence."
-
-
-* Contextual Grounding: Added specific context about a 10-year-old kid fascinated by the face detection lock on his father's mobile phone. | * Better Framing: Assigning an expert persona anchored the tone to be highly accurate yet educational. *Enhanced Personalization: Grounding the prompt in the "face unlock" example made the explanation instantly relatable, moving away from abstract concepts to a real-world device the child interacts with. |
-| V3 | You are an expert AI-Educator. 
-Explain neural networks to 10-year old kid, because he just surprised by face detection feature in his father's smartphone. 
-Give output in structured way, explicitly forbid the repetition of examples; look to mandate that each section must build chronologically upon the previous one rather than introducing redundant concepts. Also make it interesting.
-Give result in 300 words, because of long text kid do not show interest to read it whole and it loses the interest in learning. | * Structural Constraints: Mandated a chronological build, explicitly forbade the repetition of examples, and added an exact 300-word limit.* Role Enhancement: Shifted the persona to a pedagogical specialist ("expert AI-Educator"). | * Eliminated Redundancy: Preventing repeated examples stopped the model from bouncing back and forth between "cats" and "faces," creating a clean, single-narrative thread. * Improved Engagement: Structuring the text chronologically and enforcing a strict word cap optimized it for a child's short attention span, maximizing information retention without causing fatigue. |
+| V2 | You are an expert in artificial intelligence. Explain neural networks to 10-year old kid who wants to know basics. He is eager to learn artificial intelligence. He was surprised by face detection lock in his father's mobile. | * Role Assignment: Designated the AI as an "expert in artificial intelligence." * Contextual Grounding: Added specific context about a 10-year-old kid fascinated by the face detection lock on his father's mobile phone. | * Better Framing: Assigning an expert persona anchored the tone to be highly accurate yet educational. *Enhanced Personalization: Grounding the prompt in the "face unlock" example made the explanation instantly relatable, moving away from abstract concepts to a real-world device the child interacts with. |
+| V3 | You are an expert AI-Educator. Explain neural networks to 10-year old kid, because he just surprised by face detection feature in his father's smartphone. Give output in structured way, explicitly forbid the repetition of examples; look to mandate that each section must build chronologically upon the previous one rather than introducing redundant concepts. Also make it interesting.Give result in 300 words, because of long text kid do not show interest to read it whole and it loses the interest in learning. | * Structural Constraints: Mandated a chronological build, explicitly forbade the repetition of examples, and added an exact 300-word limit.* Role Enhancement: Shifted the persona to a pedagogical specialist ("expert AI-Educator"). | * Eliminated Redundancy: Preventing repeated examples stopped the model from bouncing back and forth between "cats" and "faces," creating a clean, single-narrative thread. * Improved Engagement: Structuring the text chronologically and enforcing a strict word cap optimized it for a child's short attention span, maximizing information retention without causing fatigue. |
 
 Scenario B: Professional Email
 
@@ -312,6 +313,7 @@ Scenario C: Creative Content
 | V1 | Generate a creative marketing tagline for a new eco-friendly water bottle brand | N/A | N/A |
 | V2 | Act as an expert Creative Copywriter and Brand Strategist specializing in sustainable consumer goods. Your task is to develop high-impact, memorable marketing taglines. Please generate a marketing tagline for a new eco-friendly water bottle brand, which is made from ocean plastic. | * Role Assignment: Appended an expert persona ("Expert Creative Copywriter and Brand Strategist specializing in sustainable consumer goods"). * Specific Product Material: Added exact context about the bottle's unique value proposition (made from ocean plastic). | * Enhanced Domain Expertise: Giving the model a focused industry persona changed its vocabulary from generic eco-clichés to specific ocean conservation terminology. * Context-Driven Brainstorming: Specifying "ocean plastic" allowed the AI to narrow down its creative concepts, generating highly tailored outputs (e.g., words like sea, ocean, tide) instead of generic environmental lines. |
 | V3 | Act as an expert Creative Copywriter and Brand Strategist specializing in sustainable consumer goods. Develop 3 bold, action-oriented taglines for an eco-friendly water bottle made from recycled ocean plastic. The tone should be gritty, urgent, and empowering—focused on turning pollution into a solution. Avoid soft, clichéd words like "eco," "green," or "sip." | * Quantity Constraint: Limited the primary output to exactly 3 taglines. * Tone & Emotional Profiling: Defined a highly specific mood ("gritty, urgent, and empowering—focused on turning pollution into a solution"). * Negative Constraints / Forbidden Words: Explicitly banned soft, overused environmental industry words ("eco", "green", "sip"). | * Quality over Quantity: Limiting the output forced the model to distill its creativity into its strongest ideas, completely eliminating output clutter. * Niche Differentiation: Establishing a gritty, urgent tone completely shifted the messaging framework away from passive environmentalism into a proactive movement. * Forced Innovation: Banning buzzwords like "eco" and "green" broke the model's reliance on lazy, clichéd patterns, resulting in sharp, distinctive, and authentic brand copy. |
+
 ### 1.3 Role and Context Analysis
 
 ## Part 2: Temperature & Parameter Control
