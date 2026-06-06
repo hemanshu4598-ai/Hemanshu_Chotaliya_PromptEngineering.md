@@ -316,11 +316,394 @@ Scenario C: Creative Content
 
 ### 1.3 Role and Context Analysis
 
+Adding role assignment and background context drastically improved the outputs by moving the AI away from generic, high-frequency boilerplate responses and focusing its semantic search on domain-specific knowledge. By establishing targeted personas (such as an "expert AI-Educator" or a "Creative Copywriter specializing in sustainable goods"), the model inherently adopted the exact vocabulary, structural rigor, and tone appropriate for the respective industries. Furthermore, providing concrete environmental and situational context (like ocean plastic constraints or a child fascinated by a smartphone face unlock) gave the AI distinct thematic parameters to build upon, which eliminated irrelevant concepts and resulted in highly personalized, impactful, and authentic final text.
+
+The Logic
+
+Role Assignment Impact: When you prompt an LLM without a role, it samples broadly from its entire training corpus, resulting in average, textbook-like language. Assigning a persona acts as a behavioral guardrail that forces the model to weigh professional jargon and industry-specific phrasing much higher in its token generation.
+
+Context Setting Impact: In Business Analytics and AI-driven data methods, context serves as the "ground truth." Giving the model distinct scenario variables restricts it from drifting into hallucinations or recycling cliché text structures, directly optimizing the output for a highly localized target audience.
+
 ## Part 2: Temperature & Parameter Control
 ### 2.1 Temperature Experimentation
+
+1.Prompt: Act as an expert plant biologist and science communicator. Explain the process of photosynthesis in a way that is scientifically rigorous yet highly engaging.
+
+2.I have adjusted Prompt for different temperature values.
+
+3.
+
+Output for Lower temperature: 
+
+# Photosynthesis: How Plants Turn Light into Life
+
+Photosynthesis is the biochemical process by which plants, algae, and some bacteria convert light energy into chemical energy stored in sugars. It is one of the most important processes on Earth because it provides the foundation for most food webs and produces much of the oxygen in our atmosphere.
+
+## The Big Picture
+
+Photosynthesis occurs primarily in specialized organelles called **chloroplasts**, found in plant cells. Using sunlight, plants transform carbon dioxide (CO₂) from the air and water (H₂O) from the soil into glucose (a sugar) and oxygen (O₂).
+
+The overall chemical equation is:
+
+6CO_2 + 6H_2O + light\ energy \rightarrow C_6H_{12}O_6 + 6O_2
+
+This equation summarizes the process, but the actual mechanism involves dozens of coordinated biochemical reactions.
+
+---
+
+## Step 1: Capturing Light Energy
+
+Inside chloroplasts are membrane structures called **thylakoids**, which contain pigments such as **chlorophyll**.
+
+light\ energy \rightarrow excited\ electrons
+
+When chlorophyll absorbs photons (particles of light), its electrons gain energy and become excited. This energy is the starting point for all subsequent reactions.
+
+Different pigments absorb different wavelengths of light, allowing plants to harvest solar energy efficiently.
+
+---
+
+## Step 2: The Light-Dependent Reactions
+
+These reactions occur in the thylakoid membranes.
+
+### Water Splitting
+
+To replace the excited electrons lost by chlorophyll, water molecules are split in a process called **photolysis**:
+
+[
+2H_2O \rightarrow 4H^+ + 4e^- + O_2
+]
+
+This reaction releases oxygen as a by-product—the oxygen we breathe.
+
+### Energy Conversion
+
+The energized electrons move through a series of proteins known as the **electron transport chain**. As they move, their energy is used to generate two crucial energy-carrying molecules:
+
+* **ATP (adenosine triphosphate)** – the cell's energy currency
+* **NADPH** – a molecule that carries high-energy electrons
+
+At the end of the light-dependent reactions, sunlight has been converted into chemical energy stored in ATP and NADPH.
+
+---
+
+## Step 3: The Calvin Cycle (Light-Independent Reactions)
+
+The Calvin Cycle occurs in the chloroplast's fluid-filled region called the **stroma**.
+
+Its purpose is to use ATP and NADPH to convert carbon dioxide into organic molecules.
+
+The cycle proceeds through three major phases:
+
+### 1. Carbon Fixation
+
+An enzyme called **RuBisCO** captures atmospheric CO₂ and attaches it to a five-carbon molecule called RuBP.
+
+### 2. Reduction
+
+Using ATP and NADPH from the light reactions, the captured carbon is converted into a three-carbon sugar called G3P (glyceraldehyde-3-phosphate).
+
+### 3. Regeneration
+
+Most G3P molecules are recycled to regenerate RuBP, allowing the cycle to continue. Some G3P leaves the cycle and is used to synthesize glucose and other carbohydrates.
+
+---
+
+## Why Photosynthesis Matters
+
+Photosynthesis is far more than a plant survival mechanism:
+
+* It converts solar energy into a form usable by living organisms.
+* It removes CO₂ from the atmosphere.
+* It produces oxygen required for aerobic life.
+* It forms the basis of nearly all terrestrial and aquatic food chains.
+
+Every grain of rice, apple, loaf of bread, and even the energy stored in fossil fuels can ultimately be traced back to photosynthesis.
+
+## A Useful Way to Think About It
+
+Imagine a plant as a highly sophisticated solar-powered chemical factory:
+
+1. **Solar panels (chlorophyll)** capture sunlight.
+2. **Power generators (light reactions)** convert light into ATP and NADPH.
+3. **Manufacturing units (Calvin Cycle)** use that energy to assemble carbon dioxide into sugars.
+4. **Waste output** is oxygen, which is released into the atmosphere.
+
+In essence, photosynthesis is nature's method of transforming light into matter, creating the energy-rich molecules that sustain most life on Earth.
+
+Output for Medium temperature: 
+
+# Photosynthesis: How Plants Turn Light Into Life
+
+Photosynthesis is one of the most important biological processes on Earth. It is the mechanism by which plants, algae, and some bacteria capture energy from sunlight and convert it into chemical energy stored in sugars. Nearly all complex life depends on this process, either directly or indirectly.
+
+## The Big Picture
+
+Plants take in:
+
+* Carbon dioxide (CO₂) from the air
+* Water (H₂O) from the soil
+* Sunlight from the Sun
+
+They produce:
+
+* Glucose (C₆H₁₂O₆), a sugar used as fuel and building material
+* Oxygen (O₂), released into the atmosphere
+
+The overall reaction is:
+
+6CO_2 + 6H_2O + light\ energy \rightarrow C_6H_{12}O_6 + 6O_2
+
+This equation looks simple, but it represents a remarkably sophisticated series of molecular events.
+
+---
+
+## Where Does Photosynthesis Happen?
+
+Photosynthesis occurs inside specialized structures called chloroplasts, found mainly in the leaves of plants.
+
+![Image](https://images.openai.com/static-rsc-4/JyjMMP3Tw5igIbXLBwWfCAXeSCvqrO7AHZyE2aCecSl8-JCZP-dLVrliXYa4NO8Hbm0cyW3p2jKRLtRqqlhfLCZgOUcd2Chuwy9qnpOepTbeC7Y6iN6RVZj5A47sVCSv19P1MNoJlwG1M6E8PQUxHy8Bg8kzns1vaFzoJZP0SUSLad7wKuFaMBzT0O_4lZ04?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/xb4JHYUg5UqGF4x_31LZeNitEkHqcIaMFDJQAFhqoHzQlQYMicESzzDnnv6J-SFbCYVz89NW7MmA6KL_QPjjmrXKiE3edZ24_219hNmbCNK6r9RRXOJV_rRaoiKx4sHreTCfbGlFUD77kdAtvidtD1UUGssGlgilRW6dQpdmb9qA9AuZ9ijhAVBZ68i4Qebc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/muAg8L7a8Ak55LJrcrcRn17ro3-FHY7_WLl6iPby5MvRnTIF0l1Tii6RENb5sl99tTqcQBnmz9KEdzREpQYCLQ3yQf4-l1erdTV5P-nXtwLNHy1yTne78Y7snRJdJwQYsZzT9oOfTH8ZYeA-lB36faJZLH6VSmZbF0hUqJfqc4if99x4v_gJIZsV7Xd-GHDS?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/HSA3hX1OvgBb33mTm87HAnkCl7RZEVz9ulXm7I-zemv-YJZnpOQYfnw0jIan7Bqn-V6EgkCO85lkZ3e_YFAzQR_7O4JTMBWaP4gzIa8z3UrmdJGea0AyE9F1anlZNPBtWngtRqsRSO_z6P4uDw-wM7Xb2gtu7KLNdWyqIcCT-FBKVOKIxGsa2kdt4qmO28uh?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/UgsdhmvTf8CnSBBKIdAToDT04eq1SYLmGgYyvbEv6nxOjf5Ot25PsvDKz61WcnB4xvWcpc4Cz902oDP6kcmrm8zrxjcgVbO5uOxBEAR8F4w7cTEVbkyozNxpjX5R2jwn3psrAAqU_1ObMDtbS1JRjIMfCBnWhPkRbSCIgvISNRRScZ-fGjz-4irBcVHZHBoG?purpose=fullsize)
+
+Within chloroplasts:
+
+* **Thylakoid membranes** capture sunlight.
+* The surrounding fluid, called the **stroma**, is where sugars are assembled.
+
+The green pigment **chlorophyll** is the key light-absorbing molecule. It absorbs mainly blue and red wavelengths while reflecting green light, which is why most plants appear green.
+
+---
+
+## Stage 1: The Light-Dependent Reactions
+
+These reactions occur in the thylakoid membranes.
+
+When sunlight strikes chlorophyll:
+
+1. Light energy excites electrons in chlorophyll molecules.
+2. Water molecules are split in a process called **photolysis**.
+3. This releases:
+
+   * Electrons
+   * Hydrogen ions (H⁺)
+   * Oxygen gas (O₂)
+
+The oxygen is released into the atmosphere as a by-product.
+
+The energized electrons move through an electron transport chain, generating two important energy carriers:
+
+* **ATP** (the cell's energy currency)
+* **NADPH** (a molecule that carries high-energy electrons)
+
+Think of this stage as a solar-powered charging station that stores sunlight in portable chemical batteries.
+
+---
+
+## Stage 2: The Calvin Cycle
+
+The Calvin Cycle takes place in the stroma.
+
+Here, the plant uses:
+
+* Carbon dioxide from the atmosphere
+* ATP produced in Stage 1
+* NADPH produced in Stage 1
+
+A key enzyme called **RuBisCO** captures CO₂ and incorporates it into organic molecules.
+
+Through a series of reactions, carbon atoms are rearranged and eventually converted into glucose and other carbohydrates.
+
+Unlike the first stage, the Calvin Cycle does not directly require sunlight, but it depends on the ATP and NADPH generated by the light reactions.
+
+---
+
+## Why Photosynthesis Matters
+
+Photosynthesis is more than a plant process—it is the energetic foundation of the biosphere.
+
+It:
+
+* Produces the oxygen humans and animals breathe.
+* Creates the organic matter that feeds most ecosystems.
+* Removes carbon dioxide from the atmosphere.
+* Stores solar energy in chemical bonds.
+* Drives global carbon and oxygen cycles.
+
+Every piece of fruit, grain, vegetable, and even the food eaten by animals ultimately traces its energy back to photosynthesis.
+
+---
+
+## A Remarkable Perspective
+
+A leaf is not merely a green structure. It is a highly evolved solar-energy converter containing billions of molecular machines that capture photons, move electrons, split water, build sugars, and help regulate Earth's atmosphere.
+
+In essence, photosynthesis is the process by which sunlight becomes food, oxygen, forests, ecosystems—and ultimately, life as we know it. 🌱☀️
+
+Output for higher temperature:
+
+# Photosynthesis: How Plants Turn Light into Life
+
+Imagine a leaf as a solar-powered biochemical factory. Every second, millions of tiny molecular machines inside it capture sunlight and transform that energy into the sugars that fuel nearly all life on Earth. This remarkable process is called **photosynthesis**.
+
+## The Big Idea
+
+Photosynthesis converts **light energy** into **chemical energy** stored in sugar molecules.
+
+The overall reaction can be represented as:
+
+6CO_2 + 6H_2O + light\ energy \rightarrow C_6H_{12}O_6 + 6O_2
+
+In simple terms:
+
+* Plants take in **carbon dioxide (CO₂)** from the air.
+* They absorb **water (H₂O)** from the soil.
+* They capture **sunlight** using chlorophyll.
+* They produce **glucose** (a sugar) and release **oxygen**.
+
+But this equation hides an astonishing amount of molecular engineering.
+
+---
+
+## Inside the Leaf: The Solar Factory
+
+Within plant cells are organelles called Chloroplast.
+
+![Image](https://images.openai.com/static-rsc-4/1aGa_OTujxBvDQxL04-Js6WWUlwI5nQjN130Zt9d8T5RbN--jIAxIEkRV1qjTE3Ix_4G2SS7-Zc43YLzLmSpeFHbsMPVR5-U-rIhHYwhkSj0P1il26yrjB5apxWPS_pz3hzHfmr1ARBRKnt3VOMBB6UR_pj9Ge-uhFz8ysowzBiY0v_i2ZEJw4MBcHxzFX6-?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/DJDzRXcR5mh5KCKK1cWoKRlpRbcoMZh4WIG3m_BfSPA70Nx1XFciWpw809U57GR60saMBN-1y3jtA2957fw4RkR7RWRGcAQZANE2gjWL7o9QRM_Ck59kob61HN-l_uAI6QBKn8rc86sMNp9AYskfecFlbyg8YkjeWNa-FMn4p9-QOcazAHW3sD3oCf-UCwjo?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/BrJL0hI3Ta7z9Mk8v2OLwoqHBAkwD07Bk1zI9AooqnX9f37Wz1E6761SxQsE3DvBAUsvDsJ2H1DQAdDzFFVrgXw6yW17cFly2aKVrYdMG2Bw5chHB80PUsdYxwmS1Atx0OtiQ-QO5rPMDFVCAo0wx0FYn41yQyGP_YdccN1yxr4V4gzJ770yw53ixuCRmgpJ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3d0h_FERGz2iHTx32XjacAW1VxnCorFh8duGUSwLajIH3CEsr0rKpYzpIK2asbCYPhvwUsRjPWXPBtxYc3AkiTfIiT3QHY-TgMw67rg-rYcl2JszlP95SH6DNUuws17UYYjgWcZahqnzJDJKZup8-OYvHepVh52tTJC0C16TlbNBvRGn2pQe_DxSgCWP1tYT?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/jwT93PZkWWkdG6wdctbzMQj2b8Gd1EVzFRU4JGoB2wZVpioufLk99PjQBJwrw9VfSLAWoJ-02VZyY8OV6BKlYTC0lnfRfBTCM1iZ0ZSwB714Dh1D7eq98t3Pk5eO3lvNFHYKd_bGDCFRuuucku_8_7vzxNulQfFnSIObQaRYGiVzG3fuYoavmvi3u_iEwxpm?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/lYE4oTgbnTkghbe4UjNvIx4U_MzyIjv8GhL0NBeAHo50GR2QKM4PGD_zUsLZQo0KdYgM2xNFVQuG077yuZxiib02qfGh2lZDmYoqgxH049MdYTaKV22d1PFvvXrWqAeijWELwFNUlvK9O4FULNa8HOmMAk6SH_BLknHJQbe-3qFmgOKscvnR6pNJbnEM6C-v?purpose=fullsize)
+
+Each chloroplast contains stacks of membrane discs called **thylakoids**, which act like microscopic solar panels. Embedded within these membranes are pigments, especially **chlorophyll**, the molecule responsible for the green color of plants.
+
+Chlorophyll absorbs mainly blue and red wavelengths of light while reflecting green light, which is why forests, grasslands, and houseplants appear green to our eyes.
+
+---
+
+# Stage 1: Capturing Sunlight (Light-Dependent Reactions)
+
+When sunlight strikes chlorophyll, something extraordinary happens.
+
+A photon of light excites an electron, boosting it to a higher energy state. Plants then channel this energized electron through a series of protein complexes known as an **electron transport chain**.
+
+Think of it as a carefully designed energy cascade rather than a random burst of power.
+
+During this stage:
+
+1. Water molecules are split.
+2. Oxygen is released as a by-product.
+3. Energy-rich molecules called **ATP** and **NADPH** are generated.
+
+The water-splitting reaction is one of nature's most important chemical achievements because it produces nearly all of the oxygen in Earth's atmosphere.
+
+Without photosynthetic oxygen production, complex animals—including humans—could not exist.
+
+---
+
+# Stage 2: Building Sugar (The Calvin Cycle)
+
+The ATP and NADPH produced in the first stage are then used in the chloroplast's fluid-filled region called the **stroma**.
+
+Here, plants perform a form of molecular construction.
+
+Carbon dioxide from the atmosphere is captured and incorporated into organic molecules through a series of enzyme-driven reactions known as the **Calvin Cycle**, named after Melvin Calvin.
+
+The star enzyme is **RuBisCO**, often considered the most abundant enzyme on Earth.
+
+Its job is to capture atmospheric carbon dioxide and begin converting it into sugars.
+
+Over many reaction cycles, plants assemble carbon atoms into glucose and other carbohydrates that can be:
+
+* Burned for energy
+* Stored as starch
+* Used to build cellulose for stems, trunks, and leaves
+* Converted into countless other biological molecules
+
+---
+
+## A Different Way to Think About Photosynthesis
+
+Photosynthesis is often described as "plants making food."
+
+A deeper perspective is that plants are performing **energy storage across time**.
+
+A leaf captures sunlight that exists for only a fraction of a second and locks that energy into chemical bonds that may persist for months, years, or even centuries.
+
+The wood of an ancient tree is essentially stored sunlight.
+
+The energy in fruits, grains, and vegetables is stored sunlight.
+
+Even fossil fuels originated from photosynthetic organisms that lived millions of years ago.
+
+---
+
+## Why Photosynthesis Matters to Life on Earth
+
+![Image](https://images.openai.com/static-rsc-4/39DUJYf_AAjBcjNghIfOzQwNfIzvKe96rD8FW-LJIgU5tF95mPDpit2fO8F45J9A3HYmVkfO6PhLJ6GtiucQRFLbg9ys84-ubN77c7NtgNAYPiiBW3pcmpDeNn9BnnTCD5rjp4r2_okkbS7ChH_va09BKgDIAGYWLnazE1LZyGN27nSrZ4AkIoEDr-SksYvt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QBiNtU7LE5UcJFhaAtMgsGznJxZOjq8cJ5DKBnfUZIZdX-QbSN8UH0s8GYBROTZfBFJ0YsUhfnMqOI7N0U7EfZzdbQDu4TwQ5WiQU18Wb5t_4vyInYn4r2n7twJWgFoLhr9TTSvsWoNUctOIn46EmOrv5j7wv-RO-IF5AFxAROhox9ptDLZxsUeHdtmKk2bv?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/BbP3FcXnYi8bPqx8ZZ-71xjQNlPq1JdVdvQsiWXj9fm2P_y8hTbpDXo60_mk2ZmFXu5LhLWkY6rBG_e5BB_TJk-btzVfm45I6VfFQF4jAi2WcbQ3iMZm_LB_NBVjyZUG2cEqKN_zLBGyo3oBOUhV5R_3mNRuCzR7-KlhfmkapePtsMKlDr9-oUeGrqI5IygD?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/q990bw7dtVMONnAe8ETdbdN0M6JACS58luDi6_aFUw6tdHFs2fdzOAqO81oQQRPhXwlFhY-luauJIzVk8BRIzBmvI43k_qDLrQ1z27JGb-2Te9A3Cr4BB0m1V7x_jeLnCJbBppR1rz-94wyJVWgFPDSNMmm0awSE1beXv3-gZjUxlXBKEQibMTdrbT_0P1dj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Dzgb-wAtx1sv6jbFKjr9w240ZgPL2lJOQJ2Z5ziZ_KxTRR-i9PrvnErSI609CgwJm60ugP6qDNw5jXmCKPP-CxZHaOG-qJlUZhgJRymgsVGadWoMqxksELUUJDFKwrzov478B4b_59KhbsHS0ODtKrvPvyTY8tqXjT9VbgzYc9NZT0BZY7tT0yApNlyu30gu?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/6Hc1UHKwU1I7SxEfD7se8iCslHF9ABqvZfY3FGHSXWujAfnbsLtQ3lqWCSUgP3CR9FWKGsHhL8RrmvTG0HjH_PdixZ4oywRlx9dQIniZDhrqq-ueMi9LWyfqX5l_iRnWNdPYM9v8QT4LymByG7SV3k69XI7eqyV0a09IdPCv-SKKOQQhMLogV5YW8q2HDZxc?purpose=fullsize)
+
+Photosynthesis:
+
+* Produces the oxygen we breathe.
+* Forms the foundation of nearly every food chain.
+* Removes carbon dioxide from the atmosphere.
+* Powers ecosystems from rainforests to oceans.
+* Drives the global carbon cycle and influences climate.
+
+Every bite of food you eat, whether plant or animal, can ultimately be traced back to photosynthesis.
+
+---
+
+## The Remarkable Conclusion
+
+Photosynthesis is not merely a plant process—it is one of the most important energy-conversion systems in the universe known to us. Through billions of years of evolution, plants developed a molecular technology capable of capturing light from a star 150 million kilometers away and transforming it into the substance of life itself.
+
+Every green leaf is therefore more than a piece of plant tissue. It is a self-assembling, self-repairing solar-powered factory that continuously turns sunlight, water, and air into the biological wealth of our 
+planet.
+
+A comparison table showing key differences:
+
+| Feature / Dimension | Output 1 (High Temperature) | Output 2 (Medium Temperature) | Output 3 (Low Temperature) |
+| :--- | :--- | :--- | :--- |
+| **Tone & Style** | Narrative, poetic, and highly metaphorical ("molecular engineering", "ancient tree"). | Balanced, instructional, and structured. | Analytical, technical, and textbook-like. |
+| **Structural Layout** | Loose paragraphs; relies on narrative flow; contains formatting artifacts (large empty gaps). | Clean, standard Markdown hierarchy with bullet points. | Rigorously organized with numbered phases, technical subheadings, and isolated formulas. |
+| **Chemical Depth** | Covers the general formula; mentions RuBisCO conceptually; lacks specific sub-steps. | Introduces terms like photolysis; lists exact inputs/outputs of the Calvin Cycle. | Deepest technical depth; includes the specific water-splitting equation and details the 3 phases of the Calvin Cycle (Fixation, Reduction, Regeneration). |
+| **Terminology Used** | Broad/Conceptual ("energy cascade", "molecular construction"). | Intermediate ("portable chemical batteries", "electron transport chain"). | Advanced/Precise ("RuBP", "G3P", "photolysis", "aerobic life"). |
+| **Core Analogy** | The leaf as a timeless energy storage device spanning centuries (wood, fossil fuels). | The leaf as a solar-powered charging station with portable batteries. | The leaf as a highly organized blueprint of a factory (Panels → Generators → Manufacturing). |
+
 ### 2.2 Analysis & Recommendations
 
+I would use low temperature settings for tasks requiring strict adherence to facts and logic, such as debugging software code or generating legal contracts, where accuracy is critical and deviations can cause system failures. Conversely, high temperature settings are ideal when randomness and novelty are assets rather than liabilities. Specific use cases for high temperature include brainstorming unique marketing taglines or writing fiction dialogue, where predictable or standard answers are undesirable. Ultimately, low temperature ensures deterministic precision, while high temperature unlocks creative variation.
+If the goal is to create a blog post, an introductory science article, or educational content for non-scientists, Output 2 (Medium temperature) is the best.
+Why: It strikes the optimal balance. High temperature (Output 3) is too loose, suffers from broken formatting, and wastes time being overly poetic. Low temperature (Output 1) introduces terms like $RuBP$ and $G3P$ without warning, which will cause a general reader to tune out. Output 2 retains a strong analogy (the charging station) while keeping the structure perfectly clean and scannable.
+
 ## Part 3: Strategic Prompting Techniques
+
+
+
 ### 3.1 Chain-of-Thought Prompting
 ### 3.2 Few-Shot Prompting
 
